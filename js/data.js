@@ -1,6 +1,6 @@
 const data = [
   user = {
-    name: 'Nome Utente',
+    name: 'Andrea Bevilacqua',
     avatar: '_io'
   },
   contacts = [
