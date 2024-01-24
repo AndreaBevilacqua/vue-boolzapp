@@ -159,6 +159,35 @@ i {
     padding-left: 40px;
 }
 
+/* Chat Contacts */
+
+.chat-contacts {
+    position: relative;
+    height: calc(100% - 220px);
+    overflow: auto;
+}
+
+.chat-contacts img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Single chat */
+
+.single-chat {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    border-bottom: 2px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 
 
 

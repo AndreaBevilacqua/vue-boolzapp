@@ -59,6 +59,16 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
+
+                <!-- Chat contacts -->
+                <div class="chat-contacts">
+                    <ul class="list-group">
+                        <li v-for="contact in contacts" class="list-group-item single-chat">
+                            <img :src=`img/${contact.avatar}` alt="">
+                            <span>{{contact.name}}</span>
+                        </li>
+                      </ul>
+                </div>
             </div>
             <div class="right"></div>
         </div>
