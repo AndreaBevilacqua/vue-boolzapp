@@ -188,6 +188,41 @@ i {
     gap: 20px;
 }
 
+/* Right header */
+
+.right .header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    background-color: #ededed;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-contact-info {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.chat-contact-image img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.chat-contact-buttons {
+    display: flex;
+    gap: 25px;
+}
+
+
+
+
 
 
 
