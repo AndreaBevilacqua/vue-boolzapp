@@ -24,9 +24,24 @@
 </head>
 <body>
     <div id="root">
+        <!-- Main-container -->
         <div class="container-custom">
+            <!-- LeftSide container -->
             <div class="left">
-                <div class="header"></div>
+                <!-- Header left -->
+                <div class="header">
+                    <div class="user-info">
+                        <div class="user-image">
+                            <img src="img/avatar_io.jpg" alt="me">
+                        </div>
+                        <div class="user-name fw-bold fs-4">{{user.name}}</div>
+                    </div>
+                    <div class="user-buttons">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
             </div>
             <div class="right"></div>
         </div>
