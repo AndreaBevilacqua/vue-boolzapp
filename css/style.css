@@ -14,3 +14,31 @@ body {
     min-height: 100vh;
     background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%);
 }
+
+/* Utils */
+
+.container-custom {
+    display: flex;
+    position: relative;
+    width: 1396px;
+    max-width: 100%;
+    height: calc(100vh - 40px);
+    background-color: white;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.06), 0 2px 5px rgba(0,0,0,0.06);
+}
+
+/* Main Content */
+
+.container-custom .left {
+    position: relative;
+    flex-basis: 30%;
+    border-right: 1px solid gray;
+}
+
+.container-custom .right {
+    position: relative;
+    flex-basis: 70%;
+    background-image: url(../img/mine.jpg);
+}
+
+/* Left Side Mian Content */
