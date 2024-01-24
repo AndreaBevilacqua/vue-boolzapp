@@ -4,8 +4,9 @@ const {createApp} = Vue;
 const app = createApp({
     name: 'Boolzapp',
     data: () => ({ 
-        users,
-        contacts
+       contacts,
+       user
     })
 })
 app.mount('#root');
+
