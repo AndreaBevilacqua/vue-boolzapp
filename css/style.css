@@ -260,11 +260,11 @@ i {
     justify-content: flex-end;
 }
 
-.receive {
+.received {
     justify-content: flex-start;
 }
 
-.receive p {
+.received p {
     background-color: white;
 }
 
