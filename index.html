@@ -64,8 +64,8 @@
                 <div class="chat-contacts">
                     <ul class="list-group">
                         <li v-for="contact in contacts" :key="contact.id" class="list-group-item single-chat">
-                            <img :src=`img/avatar${contact.avatar}.jpg` alt="">
-                            <span>{{contact.name}}</span>
+                            <img :src=`img/avatar${contact.avatar}.jpg` alt="contact.name">
+                            <span class="fw-bold">{{contact.name}}</span>
                         </li>
                       </ul>
                 </div>
@@ -78,7 +78,7 @@
                         <div class="chat-contact-image">
                             <img src="img/avatar_2.jpg" alt="me">
                         </div>
-                        <div class="chat-contact-name fs-4">Samuele <br>
+                        <div class="chat-contact-name fs-4">{{}}<br>
                         <span class="contact-last-access fs-6 text-secondary">Ultimo accesso alle ore </span></div>
                     </div>
                     <!-- Chat contact buttons -->
