@@ -55,7 +55,7 @@
                 <!-- SearchBar -->
                 <div class="search-chat">
                     <div>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchContact">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                 <!-- Chat contacts -->
                 <div class="chat-contacts">
                     <ul class="list-group">
-                        <li v-for="contact in contacts" :key="contact.id" class="list-group-item single-chat">
+                        <li v-for="contact in filteredContacts" :key="contact.id" class="list-group-item single-chat">
                             <img :src=`img/avatar${contact.avatar}.jpg` alt="contact.name">
                             <span class="fw-bold">{{contact.name}}</span>
                         </li>

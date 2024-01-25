@@ -9,12 +9,21 @@ const app = createApp({
       user,
       contacts,
       currentId: 1,
-      newMessage: ''
+      searchContact: ''
      }),
 
      computed: {
       currentContact() {
 
+      },
+
+      filteredContacts() {
+        const searchTerm = this.searchContact.toLowerCase();
+
+        const FilteredArray = this.contacts.filter(contact => 
+          contact.name.toLowerCase().includes(searchTerm)
+        );
+        return FilteredArray;
       }
      },
 
