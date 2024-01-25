@@ -1,7 +1,7 @@
 const data = {
   user: {
-    name: 'Nome Utente',
-    avatar: '_io'
+    name: 'Andrea Bevilacqua',
+    avatar: '_2'
   },
   contacts: [
     {
@@ -31,8 +31,8 @@ const data = {
     },
     {
       id: 2,
-      name: 'Fabio',
-      avatar: '_2',
+      name: 'Paola',
+      avatar: '_io',
       messages: [
         {
           id: 1,
