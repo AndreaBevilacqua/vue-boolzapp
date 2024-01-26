@@ -91,11 +91,8 @@
 
                 <!-- Main Chat -->
                 <div class="main-chatbox">
-                    <div class="message sent">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, maiores.</p>
-                    </div>
-                    <div class="message received">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, fugiat.</p>
+                    <div v-for="message in currentContact.messages" class="message sent" :class="message.status">
+                        <p>{{message.text}}</p>
                     </div>
                 </div>
                 <!-- Footer right -->
