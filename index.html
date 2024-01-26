@@ -63,7 +63,7 @@
                 <!-- Chat contacts -->
                 <div class="chat-contacts">
                     <ul class="list-group">
-                        <li v-for="contact in filteredContacts" :key="contact.id" class="list-group-item single-chat" role="button">
+                        <li v-for="contact in filteredContacts" :key="contact.id" @click="setCurrentId(contact.id)" class="list-group-item single-chat" role="button">
                             <img :src=`img/avatar${contact.avatar}.jpg` alt="contact.name">
                             <span class="fw-bold">{{contact.name}}</span>
                         </li>
@@ -74,11 +74,11 @@
             <!-- rightside container -->
             <div class="right">
                 <div class="header">
-                    <div v-for="contact in contacts" :key="contact.id" class="chat-contact-info">
+                    <div class="chat-contact-info">
                         <div class="chat-contact-image">
-                            <img :src=`img/avatar${contact.avatar}.jpg` alt="contact.name">
+                            <img :src=`img/avatar${currentContact.avatar}.jpg` :alt="currentContact.avatar">
                         </div>
-                        <div class="chat-contact-name fs-4">{{contact.name}}<br>
+                        <div class="chat-contact-name fs-4">{{currentContact.name}}<br>
                         <span class="contact-last-access fs-6 text-secondary">Ultimo accesso alle ore </span></div>
                     </div>
                     <!-- Chat contact buttons -->

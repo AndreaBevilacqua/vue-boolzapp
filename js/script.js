@@ -13,8 +13,9 @@ const app = createApp({
      }),
 
      computed: {
-      currentContact() {
 
+      currentContact(){
+        return this.contacts.find((contact) => contact.id === this.currentId)
       },
 
       filteredContacts() {
@@ -30,7 +31,11 @@ const app = createApp({
      methods: {
       getAvatarUrl({ avatar }) {
         return `img/avatar${avatar}.jpg`
-      }
+      },
+
+      setCurrentId(id) {
+        this.currentId = id
+      },
      }
 })
 app.mount('#root');
