@@ -55,7 +55,19 @@ const app = createApp({
           text: this.newMessageText
         }
 
-        this.currentChat.push(newMessage)
+        this.currentChat.push(newMessage);
+        this.newMessage= '';
+
+        setTimeout(() => {
+          const newMessage = {
+            id: new Date().getTime(),
+            data: new Date().toLocaleTimeString(),
+            status: 'received',
+            text: 'ok'
+          }
+  
+          this.currentChat.push(newMessage);
+        }, 1000);
       }
      }
 })
