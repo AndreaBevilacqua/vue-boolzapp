@@ -18,6 +18,10 @@ const app = createApp({
         return this.contacts.find((contact) => contact.id === this.currentId)
       },
 
+      currentChat(){
+        return this.currentContact.messages;
+      },
+
       filteredContacts() {
         const searchTerm = this.searchContact.toLowerCase();
 
