@@ -91,14 +91,14 @@
 
                 <!-- Main Chat -->
                 <div class="main-chatbox">
-                    <div v-for="message in currentContact.messages" class="message sent" :class="message.status">
+                    <div v-for="message in currentContact.messages" class="message sent" :class="message.status"> 
                         <p>{{message.text}}</p>
                     </div>
                 </div>
                 <!-- Footer right -->
                 <div class="text-chatbox">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input type="text" placeholder="Scrivi un messaggio" v-model.trim="newMessageText" @keyup.enter="sendMessage">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </div>
