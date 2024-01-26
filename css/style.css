@@ -247,9 +247,12 @@ i {
 }
 
 .message time {
+    position: absolute;
     text-align: right;
     font-size: 8px;
     color: gray;
+    bottom: 17px;
+    margin: 0 10px;
 }
 
 .message p {
@@ -298,6 +301,10 @@ i {
 .main-chatbox p i {
     font-size: 1rem;
     margin-left: 5px;
+}
+
+p:hover i {
+    display: block;
 }
 
 /* Text chat box */
