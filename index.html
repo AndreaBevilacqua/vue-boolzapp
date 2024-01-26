@@ -93,6 +93,7 @@
                 <div class="main-chatbox">
                     <div v-for="message in currentContact.messages" class="message" :class="message.status"> 
                         <p>{{message.text}} <i class="fa-solid fa-chevron-down d-none"></i></p>
+                        <!-- <time :datetime="message.date">{{message.date}}</time> -->
                     </div>
                 </div>
                 <!-- Footer right -->
