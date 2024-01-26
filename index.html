@@ -79,7 +79,7 @@
                             <img :src=`img/avatar${currentContact.avatar}.jpg` :alt="currentContact.avatar">
                         </div>
                         <div class="chat-contact-name fs-4">{{currentContact.name}}<br>
-                        <span class="contact-last-access fs-6 text-secondary">Ultimo accesso alle ore </span></div>
+                        <span class="contact-last-access fs-6 text-secondary">Ultimo accesso alle ore {{getCurrentTime}}</span></div>
                     </div>
                     <!-- Chat contact buttons -->
                     <div class="chat-contact-buttons">
@@ -91,8 +91,8 @@
 
                 <!-- Main Chat -->
                 <div class="main-chatbox">
-                    <div v-for="message in currentContact.messages" class="message sent" :class="message.status"> 
-                        <p>{{message.text}}</p>
+                    <div v-for="message in currentContact.messages" class="message" :class="message.status"> 
+                        <p>{{message.text}} <i class="fa-solid fa-chevron-down d-none"></i></p>
                     </div>
                 </div>
                 <!-- Footer right -->

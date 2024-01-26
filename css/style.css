@@ -243,6 +243,7 @@ i {
     display: flex;
     width: 100%;
     margin: 5px 0;
+    cursor: pointer;
 }
 
 .message p {
@@ -268,6 +269,10 @@ i {
     background-color: white;
 }
 
+.main-chatbox p i {
+    font-size: 1rem;
+    margin-left: 5px;
+}
 
 /* Text chat box */
 

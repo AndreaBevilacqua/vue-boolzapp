@@ -34,6 +34,13 @@ const app = createApp({
           contact.name.toLowerCase().includes(searchTerm)
         );
         return FilteredArray;
+      },
+
+      getCurrentTime() {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        return hours + ':' + minutes;
       }
      },
 
@@ -56,7 +63,7 @@ const app = createApp({
         }
 
         this.currentChat.push(newMessage);
-        this.newMessage= '';
+        this.newMessageText= '';
 
         setTimeout(() => {
           const newMessage = {
