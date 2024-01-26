@@ -9,10 +9,13 @@ const app = createApp({
       user,
       contacts,
       currentId: 1,
-      searchContact: ''
+      searchContact: '',
+      newMessageText: ''
      }),
 
      computed: {
+
+      // Funzione per identificare l'id corrispondente alla chat
 
       currentContact(){
         return this.contacts.find((contact) => contact.id === this.currentId)
@@ -21,6 +24,8 @@ const app = createApp({
       currentChat(){
         return this.currentContact.messages;
       },
+
+      // Funzione per filtrare i contatti
 
       filteredContacts() {
         const searchTerm = this.searchContact.toLowerCase();
@@ -33,13 +38,25 @@ const app = createApp({
      },
 
      methods: {
-      getAvatarUrl({ avatar }) {
-        return `img/avatar${avatar}.jpg`
-      },
-
+  
       setCurrentId(id) {
         this.currentId = id
       },
+
+      // Funzione per inviare un nuovo messaggio
+
+      sendMessage(){
+        if (!this.newMessageText) return;
+
+        const newMessage = {
+          id: new Date().getTime(),
+          data: new Date().toLocaleTimeString(),
+          status: 'sent',
+          text: this.newMessageText
+        }
+
+        this.currentChat.push(newMessage)
+      }
      }
 })
 app.mount('#root');
